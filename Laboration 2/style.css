@@ -1,0 +1,313 @@
+/* Färgkoder från profilbild:
+Mörkblå: 1f2234
+Rosa: cc8dba
+Ljusblå: 3bbcdc
+Blåvit: cbf1fe
+*/
+*{
+    /*Den här ser till att padding och border är medräknade i den totala höjd och vidd*/   
+    box-sizing: border-box; 
+    margin:auto;
+}
+/*Style för elementet header*/
+.top-header{
+    background-color: #1f2234;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif; /*Använder en google font*/
+}
+.top-header h2{
+    color:#cc8dba;
+}
+/*Style för navigation elementet*/
+nav{
+    background-color: #1f2234;
+    position: sticky;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+/*Style för body*/
+body{
+    user-select: none; 
+    height: 100%;
+    /*Gör så att tex headern går hela vägen ut i kant*/
+    margin: 0px;
+    background-color: #cbf1fe;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+.meny > *{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: left;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+}
+/*Style till menyn i navigation meny*/
+.meny ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    overflow: hidden;
+
+}
+.meny li{
+    font-size: 1em;
+    /*Lägger menyalternativen på en rad och tar bort listprickarna*/
+    display: inline;
+    color: #cc8dba;
+    /* float: left;  */
+    justify-items: center;
+}
+/*Style för a-element i meny*/
+.meny a{
+    font-size: 1.5em;
+    display: block; 
+    text-align: center;
+    padding: 14px 16px;
+    /*Tar bort understrecken*/
+    text-decoration: none;
+    color: #cbf1fe;
+}
+/*Style för när ett meny alt är valt*/
+.meny a.active{
+    border: #cbf1fe solid 5px;
+    border-radius: 50%;
+}
+/*Style för när man hovrar över menyn*/
+.meny a:hover{
+    background-color: #131520;
+    color:aliceblue;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+.top-header h1{
+    font-size: 3em;
+    color: #cbf1fe;
+}
+h1{
+    font-size: 3em;
+    color:#1f2234;
+    text-align: center;
+}
+section{
+    background-color: #9fe7ff;
+    display: flex;
+}
+.main-section{
+    padding: 2%;
+    border: 2px solid #1f2234;
+}
+.webbriktlinjer li{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.side-section{
+    padding: 1%;
+    align-items: flex-start;
+}
+.main-content{
+    padding: 1%;
+    flex-direction: column;
+    /* max-width: 700px; */
+}
+.main-content li,
+.main-content h4{
+    font-size: 1.2em; 
+}
+/*Bilden till portfolio*/
+.code{
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+}
+.first-paragraph{
+    text-indent: 0%;
+}
+p{
+    font-size: 1.2em;
+    text-indent: 8%;
+}
+.projekt{
+    font-size: 1.2em;
+}
+.profilbild{
+    height: 350px;
+    border: 10px solid #1f2234;
+}
+.modal-popup{
+    text-indent: 0%;
+}
+/*En sida med kolumner*/
+.kompetenser{
+    column-count: 2;
+}
+/*Styling för modal popup*/
+.button {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 8px;
+    color: #1f2234;
+    border: 2px solid #1f2234;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.button:hover {
+    background: #1f2234;
+    color: #9fe7ff;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+}
+.popup h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 1em;
+    border: 2px solid #1f2234;
+    padding: 3px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    border-radius: 25%;;
+}
+.popup .close:hover {
+    background: #1f2234;
+    color: #fff;
+    border-radius: 25%;;
+}
+.webbriktlinjer p{
+    text-indent: 0%;
+}
+ol{
+    max-width: 80%;
+}
+footer{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background-color: #1f2234;
+    color: #cbf1fe;
+    padding: 15px;
+    font-size: 1em;
+}
+footer a{
+    background-color: #1f2234;
+    color: #cbf1fe;
+}
+a:focus {
+    background-color:#cc8dba;
+    color: #000;
+}
+
+/*Om max-width/min-width uppnås så ska innehållet ändras efter dessa kriterier*/
+@media only screen and (max-width: 600px) {
+    nav, .main-section {
+      flex-direction: column;
+    }
+    .kompetenser{
+        column-count: 1;
+    }
+    .popup{
+        padding: 0%;
+        width: 80%;
+    }
+    .popup .close{
+        top: 1%;
+        right: 2%;
+    }
+    ol{
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 1399px){
+    .popup{
+        padding: 0%;
+        width: 50%;
+    }
+    .popup .close{
+        top: 1%;
+        right: 2%;
+    }
+    ol{
+        max-width: 80%;
+    }
+}
+@media only screen and (min-width: 1400px){
+    .main-section{
+        max-width: 60%;
+    }
+    ol{
+        max-width: 70%;
+    }
+}
+/* Justerar innehållet om användaren vill skriva ut sidan */
+@media print{
+    
+    body,
+    .top-header,
+    .top-header h2,
+    nav,
+    .main-section,
+    .main-content,
+    footer,
+    h1,
+    .meny a,
+    .meny a.active,
+    .overlay,
+    p
+    .webbriktlinjer li{
+        font-size: 1em;
+        background-color: #fff;
+        color: #000;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+    img,
+    .button,
+    .popup .close,
+    footer{
+      display: none;
+    }
+    .meny a.active{
+        border: 1px solid #000;
+    }
+    .overlay,
+    .popup,
+    .modal-popup p{
+        visibility: visible;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+}

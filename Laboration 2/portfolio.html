@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <!-- Javascrips -->
+    <script src ="EasterEggs/easterEggs.js"></script>
+    <title>Malin Blank CV</title>
+</head>
+<body>
+    <header class="top-header">
+        <h1>Malin Blank CV</h1>
+    </header>
+    <!-- Navigation meny -->
+    <nav class="meny" role="navigation">
+        <ul>
+            <li><a href="index.html">Om mig</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a class="active" href="portfolio.html">Portfolio</a></li>
+            
+        </ul>
+    </nav>
+    <!-- Huvudinnehåll -->
+    <section class="main-section" role="main"> <!-- Projekt 1 -->
+        <div class="side-section">
+            <img class="code" src="img/code.jpg" alt="Code">
+            <h2 class="projekt-namn">Valutaväxlare</h2>
+        </div>
+        <div class="main-content">
+            
+            <a class="button" href="#popup1">Mer Info</a> 
+        </div>   
+    </section>
+    <section class="main-section" role="main"> <!-- Projekt 2 -->
+        <div class="side-section">
+            <img class="code" src="img/code.jpg" alt="Code">
+            <h2 class="projekt-namn">Personregister</h2>
+        </div>
+        <div class="main-content">
+            <a class="button" href="#popup2">Mer Info</a>
+        </div>
+    </section>
+    <!-- React  -->
+    <section class="main-section" role="main"> <!-- Git Projekt  -->
+        <div class="side-section">
+            <img class="code" src="img/code.jpg" alt="Code">
+            <h2 id= "projekt-titel" class="projekt-namn"></h2>
+        </div>
+        <div class="main-content">
+            <div id="root" class="projekt">
+            </div>
+        </div>
+    </section>
+    <section class="modal-popup">
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2 class="projekt-rubrik">Valutaväxlare</h2>
+                <p class="modal-popup">
+                    Vi skulle skapa en console-applikation där man skulle kunna mata in 
+                    en valuta som vi ville växla ifrån, vilken summa och till vilken valuta. 
+                    Applikationen skulle då räkna ut summan efter förbestämd växlingskurs, samt 
+                    räkna ut hur många av varje enskild valör man skulle få. </p>
+                <a class="close" aria-label="Stäng" href="#">Stäng</a>
+            </div>
+        </div>
+        <div id="popup2" class="overlay">
+            <div class="popup">
+                <h2 class="projekt-rubrik">Person Registry</h2>
+                <p class="modal-popup">
+                    I denna laboration skulle vi i en Windows Forms skapa en lista med personer, 
+                    listan skulle bestå av tre olika typer: man, kvinna eller barn. I programmet skulle 
+                    vi kunna lägga till personer med för- och efternamn, kunna radera personer, sortera 
+                    listan efter efternamn m.m. Det skulle också gå att skapa ett barn om två, och endast 
+                    två personer, av olika kön var markerade. Barn skulle få förnamn från Kvinna och efternamn från Man och namnet skulle föregås av Barn (istället för Herr eller Fru).
+                    För att genomföra laborationen skulle vi ha kännedom om objektorienterad grund, arv, 
+                    överlagring av operatorer, konstruktorer, interfacet IComparable och grundläggande kunskap om GUI (Windows Forms).
+                    </p>
+                <a class="close" aria-label="Stäng" href="#">Stäng</a>
+            </div>
+        </div>
+    </section>
+    <footer role=”contentinfo”>
+        <h4 class="copyright" onclick="changeBackgroundColor('#cc8dba')">Copyright &copy Malin Blank 2022</h4>
+        <a class="webbriktlinjer" href="webbriktlinjer.html">Webbriktlinjer</a>
+    </footer>
+    <!-- React -->
+    <script 
+        src="https://unpkg.com/react@17/umd/react.development.js" 
+        crossorigin>
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" 
+        crossorigin>
+    </script>
+    <script 
+    src="https://unpkg.com/@babel/standalone/babel.min.js">
+    </script>
+    <!-- Javascrips -->
+    <script type="module" src="portfolio.js"></script>  
+</body>
+</html>
